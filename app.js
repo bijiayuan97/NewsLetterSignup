@@ -7,7 +7,7 @@ const mailchimp = require("@mailchimp/mailchimp_marketing");
 const { Console } = require("console");
 
 mailchimp.setConfig({
-    apiKey: "79fa8aede3c55afd9166bebbbcd39a06-us20",
+    apiKey: "<your-mailchimp-api-key>",
     server: "us20",
 });
 
@@ -41,7 +41,7 @@ app.post("/", function(req, res){
     const url = "https://us20.api.mailchimp.com/3.0/lists/566037b6d4";
     const options = {
         method: "POST",
-        auth: "jiayuan:79fa8aede3c55afd9166bebbbcd39a06-us20"
+        auth: "<Your-account-name>:<Your-mailchimp-api-key>"
     };
     const request = https.request(url, options, function(response){
         // response.on("data", function(data){
@@ -70,7 +70,7 @@ app.listen(process.env.PORT || 3000, function(){
 });
 
 // api key
-// 79fa8aede3c55afd9166bebbbcd39a06-us20
+// <your-mailchimp-api-key>
 
 // list id
 // 566037b6d4
